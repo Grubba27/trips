@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_cubit/misc/colors.dart';
-import 'package:flutter_cubit/widgets/app_larg_text.dart';
-import 'package:flutter_cubit/widgets/app_text.dart';
+import 'package:flutter_cubit/widgets/carrossel_page.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -37,36 +35,13 @@ class _WelcomePageState extends State<WelcomePage> {
           scrollDirection: Axis.vertical,
           itemCount: pageContent.length,
           itemBuilder: (_, index) {
-            return Container(
-              width: double.maxFinite,
-              height: double.maxFinite,
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: AssetImage("img/" + pageContent[index].bg))),
-              child: Container(
-                margin: const EdgeInsets.only(top: 150, left: 20, right: 20),
-                child: Row(
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        AppLargeText(text: pageContent[index].title),
-                        AppText(text: pageContent[index].subtitle, size: 30),
-                        Container(
-                          margin: EdgeInsets.only(top: 20),
-                          width: 250,
-                          child: AppText(
-                            text: pageContent[index].text,
-                            color: AppColors.textColor2,
-                            size: 14,
-                          ),
-                        )
-                      ],
-                    )
-                  ],
-                ),
-              ),
+            return AppCarrossel(
+              bg: pageContent[index].bg,
+              title: pageContent[index].title,
+              subtitle: pageContent[index].subtitle,
+              text: pageContent[index].text,
+              currentIndex: index,
+              pagesNumber: pageContent.length,
             );
           }),
     );
