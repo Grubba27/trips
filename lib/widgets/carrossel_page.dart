@@ -32,7 +32,7 @@ class AppCarrossel extends StatelessWidget {
           image: DecorationImage(
               fit: BoxFit.cover, image: AssetImage("img/" + bg))),
       child: Container(
-        margin: const EdgeInsets.only(top: 150, left: 20, right: 20),
+        margin: const EdgeInsets.only(top: 120, left: 20, right: 20),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
