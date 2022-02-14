@@ -6,14 +6,14 @@ import 'app_larg_text.dart';
 import 'app_text.dart';
 
 class AppCarrossel extends StatelessWidget {
-  final String bg;
-  final String title;
-  final String subtitle;
-  final String text;
-  final int pagesNumber;
-  final int currentIndex;
+  String bg;
+  String title;
+  String subtitle;
+  String text;
+  int pagesNumber;
+  int currentIndex;
 
-  const AppCarrossel(
+  AppCarrossel(
       {Key? key,
       required this.bg,
       required this.title,
