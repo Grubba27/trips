@@ -14,8 +14,7 @@ class Page {
   String subtitle;
   String text;
 
-  Page(String this.bg, String this.title, String this.subtitle,
-      String this.text);
+  Page(this.bg, this.title, this.subtitle, this.text);
 }
 
 class _WelcomePageState extends State<WelcomePage> {
