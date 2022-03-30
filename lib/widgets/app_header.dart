@@ -20,8 +20,11 @@ class AppHeader extends StatelessWidget {
             width: 50,
             height: 50,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: Colors.grey.withOpacity(0.5)),
+              borderRadius: BorderRadius.circular(25),
+              image: DecorationImage(
+                  image: AssetImage('img/face.webp'), fit: BoxFit.fill),
+              color: Colors.blue.withOpacity(0.5),
+            ),
           ),
         ],
       ),
